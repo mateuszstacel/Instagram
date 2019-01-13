@@ -2,11 +2,24 @@
 
     <% @pictures.each do |p|%>
     <br>
-  
+
     <div id="all-posts">
-      title: <%= p.title %>
-      <br>
-      description: <%= p.description %>
+      <small id="created-by">Created by:
+        <%= p.user.email %><br>
+        <small id="created-by">
+          <%= p.created_at %>
+        </small> <br>
+      </small>
+    <div style="clear:both;"></div>
+
+       <h1 class="text-color">
+         <%= p.title %>
+       </h1>
+
+        <%= image_tag p.image.url, :size => "350x250" %><br>
+        <div id="description">
+          <%= p.description %>
+        </div>
       <br>
 
       <%= link_to "Show", p %>

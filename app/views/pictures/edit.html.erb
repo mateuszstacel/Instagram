@@ -6,7 +6,9 @@
 
     <div class="form">
 
-      <h1>Edit POST!</h1> <hr><br><br><br>
+      <h1>Edit Picture!</h1> <hr>
+        <%= image_tag @picture.image.url, :size => "350x250" %><br><br>
+        <%= f.file_field :image, class: "form-control" %><br>
 
         <%= f.label :title %><br>
         <%= f.text_field :title, class: "form-control" %><br>

@@ -62,7 +62,7 @@
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: white;
-  width: 43%;
+  width: 30%;
   margin: auto;
   border-radius: 5px;
 }
@@ -83,4 +83,14 @@
   width: 43%;
   margin: auto;
   border-radius: 30px;
+}
+#description
+{
+  text-align: center;
+  padding: 10px;
+}
+#created-by
+{
+  float: right;
+
 }

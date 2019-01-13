@@ -1,10 +1,25 @@
+<div id="all-posts">
+  <div id="each-post-show-page">
 
-<div id="each-post-show-page">
-Title :<%= @picture.title %>
-<br>
-Description :<%= @picture.description %>
-<br>
-Created by :<%= @picture.user.email %>
-<br>
-<%= link_to "back", authenticated_root_path %>
+    <small id="created-by">Created by:
+      <%= @picture.user.email %><br>
+      <small id="created-by">
+        <%= @picture.created_at %>
+      </small> <br>
+    </small>
+  <div style="clear:both;"></div>
+
+    <%= @picture.title %>
+    <br>
+
+    <%= image_tag @picture.image.url, :size => "350x250" %><br>
+
+    <div id="description">
+      <%= @picture.description %>
+    </div>
+    <br>
+
+    <%= link_to "back", authenticated_root_path %>
+    <%= link_to "edit", edit_picture_path %>
+  </div>
 </div>
