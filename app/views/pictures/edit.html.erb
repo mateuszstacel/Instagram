@@ -1,15 +1,22 @@
-<h1>edit pick</h1><br>
 
-<%= form_for @picture do |f| %>
+<div class="text-color">
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-<br>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+  <%= form_for @picture do |f| %>
 
-  <%= f.button :submit %>
+  <div class="form">
 
-<% end %>
+    <h1>Edit POST!</h1> <br><br><br>
 
-<%= link_to "back", @picture %>
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: "form-control" %><br>
+      <br>
+      <%= f.label :description %><br>
+      <%= f.text_area :description, class: "form-control" %><br>
+      <br>
+      <%= f.button :submit, class: "btn btn-primary"  %><br>
+
+    <% end %><br>
+
+    <%= link_to "back", @picture %>
+  </div>
+</div>

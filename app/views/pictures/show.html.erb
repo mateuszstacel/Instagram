@@ -1,7 +1,10 @@
-<%= @picture.title %>
+
+<div id="each-post-show-page">
+Title :<%= @picture.title %>
 <br>
-<%= @picture.description %>
-
-<%= @picture.user.email %>
-
+Description :<%= @picture.description %>
+<br>
+Created by :<%= @picture.user.email %>
+<br>
 <%= link_to "back", authenticated_root_path %>
+</div>

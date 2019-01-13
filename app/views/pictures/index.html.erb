@@ -1,14 +1,18 @@
-<%= link_to "Create new", new_picture_path %>
+<div id="container">
 
-<% @pictures.each do |p|%>
-<br>
-title: <%= p.title %>
-<br>
-description: <%= p.description %>
-<br>
-description: <%= p.user.email%>
-<%= link_to "Show", p %><br>
-<%= link_to "edit", edit_picture_path(p) %><br>
-<%= link_to "Delete", picture_path(p), method: :delete, data: { confirm: "are you sure?" } %><br>
+    <% @pictures.each do |p|%>
+    <br>
+    <div id="all-posts">
+      title: <%= p.title %>
+      <br>
+      description: <%= p.description %>
+      <br>
 
-<% end %>
+      <%= link_to "Show", p %>
+      <%= link_to "edit", edit_picture_path(p) %>
+      <%= link_to "Delete", picture_path(p), method: :delete, data: { confirm: "are you sure?" } %>
+    </div>
+    <br>
+    <% end %>
+
+</div>

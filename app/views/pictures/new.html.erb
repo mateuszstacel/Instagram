@@ -1,13 +1,22 @@
-<%= form_for @picture do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-<br>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+<div class="text-color ">
 
-  <%= f.button :submit %>
+  <%= form_for @picture do |f| %>
 
-<% end %>
+  <div class="form ">
 
-<%= link_to "back", @picture %>
+    <h1>Create New POST!</h1> <br><br><br>
+
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: "form-control" %><br>
+      <br>
+      <%= f.label :description %><br>
+      <%= f.text_area :description, class: "form-control" %><br>
+      <br>
+      <%= f.button :submit, class: "btn btn-primary"  %><br>
+
+    <% end %><br>
+
+    <%= link_to "back", @picture %>
+  </div>
+</div>
