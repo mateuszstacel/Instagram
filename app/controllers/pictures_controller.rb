@@ -39,6 +39,12 @@ class PicturesController < ApplicationController
     redirect_to authenticated_root_path
   end
 
+  def upvote
+    @picture = Picture.find(params[:id])
+    @picture.upvote_by current_user
+    redirect_to authenticated_root_path
+  end
+
 
   private
 

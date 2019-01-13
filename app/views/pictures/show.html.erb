@@ -19,7 +19,9 @@
     </div>
     <br>
 
-    <%= link_to "back", authenticated_root_path %>
-    <%= link_to "edit", edit_picture_path %>
+    <div id="buttons">
+      <%= link_to "", authenticated_root_path, class: "btn btn-secondary glyphicon glyphicon-arrow-left" %>
+      <%= link_to "", edit_picture_path, class: "btn btn-primary glyphicon glyphicon-pencil" %>
+    </div>
   </div>
 </div>

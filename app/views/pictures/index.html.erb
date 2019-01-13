@@ -22,10 +22,17 @@
         </div>
       <br>
 
-      <%= link_to "Show", p %>
-      <%= link_to "edit", edit_picture_path(p) %>
-      <%= link_to "Delete", picture_path(p), method: :delete, data: { confirm: "are you sure?" } %>
-    </div>
+      <div id="buttons">
+      <%= link_to "", like_picture_path(p), method: :put, class: "btn btn-default glyphicon glyphicon-thumbs-up" %>
+      <%= p.get_upvotes.size%>
+      </div>
+      
+        <div id="buttons">
+          <%= link_to "", p, class: "btn btn-primary glyphicon glyphicon-eye-open" %>
+          <%= link_to "", edit_picture_path(p), class: "btn btn-secondary glyphicon glyphicon-pencil" %>
+          <%= link_to "", picture_path(p), method: :delete, data: { confirm: "are you sure?" }, class: "glyphicon glyphicon-trash btn btn-danger" %>
+        </div>
+      </div>
     <br>
     <% end %>
 
