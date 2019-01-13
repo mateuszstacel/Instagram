@@ -4,6 +4,10 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
   end
 
+  def show
+    @picture = Picture.find(params[:id])
+  end
+
   def new
     @picture = Picture.new
   end
@@ -11,7 +15,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     if @picture.save
-      redirect_to authenticated_root_path
+      redirect_to @picture, notice: "Picutre Posted"
     end
   end
 
@@ -21,5 +25,7 @@ class PicturesController < ApplicationController
   def picture_params
     params.require(:picture).permit(:title, :description)
   end
+
+
 
 end

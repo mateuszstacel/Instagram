@@ -1,6 +1,11 @@
-<% @pictures.each do |p|%>
+<%= link_to "Create new", new_picture_path %>
 
-<%= p.title %>
-<%= p.description %>
+<% @pictures.each do |p|%>
+<br>
+title: <%= p.title %>
+<br>
+description: <%= p.description %>
+
+<%= link_to "Show", p %><br>
 
 <% end %>
