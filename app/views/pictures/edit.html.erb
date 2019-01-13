@@ -1,22 +1,24 @@
 
-<div class="text-color">
+<div id="form-group">
+  <div class="text-color">
 
-  <%= form_for @picture do |f| %>
+    <%= form_for @picture do |f| %>
 
-  <div class="form">
+    <div class="form">
 
-    <h1>Edit POST!</h1> <br><br><br>
+      <h1>Edit POST!</h1> <hr><br><br><br>
 
-      <%= f.label :title %><br>
-      <%= f.text_field :title, class: "form-control" %><br>
-      <br>
-      <%= f.label :description %><br>
-      <%= f.text_area :description, class: "form-control" %><br>
-      <br>
-      <%= f.button :submit, class: "btn btn-primary"  %><br>
+        <%= f.label :title %><br>
+        <%= f.text_field :title, class: "form-control" %><br>
+        <br>
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: "form-control" %><br>
+        <br>
+        <%= f.button :submit, class: "btn btn-primary"  %><br>
 
-    <% end %><br>
+      <% end %><br>
 
-    <%= link_to "back", @picture %>
+      <%= link_to "back", @picture %>
+    </div>
   </div>
 </div>

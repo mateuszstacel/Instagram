@@ -59,14 +59,28 @@
 {
   margin: auto;
   text-align: center;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: white;
+  width: 43%;
   margin: auto;
+  border-radius: 5px;
 }
 .form{
-  width: 40%;
+  padding: 10px;
   text-align: center;
   margin: auto;
 }
 .text-color
 {
   color: #22cccc;
+}
+#form-group
+{
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: white;
+  width: 43%;
+  margin: auto;
+  border-radius: 30px;
 }
