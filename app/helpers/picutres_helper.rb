@@ -1,0 +1,2 @@
+module PicutresHelper
+end
