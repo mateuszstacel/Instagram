@@ -5,7 +5,8 @@
 title: <%= p.title %>
 <br>
 description: <%= p.description %>
-
+<br>
+description: <%= p.user.email%>
 <%= link_to "Show", p %><br>
 <%= link_to "edit", edit_picture_path(p) %><br>
 <%= link_to "Delete", picture_path(p), method: :delete, data: { confirm: "are you sure?" } %><br>
