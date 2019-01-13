@@ -1,0 +1,13 @@
+<%= link_to "Create new", new_picture_path %>
+
+<% @pictures.each do |p|%>
+<br>
+title: <%= p.title %>
+<br>
+description: <%= p.description %>
+
+<%= link_to "Show", p %><br>
+<%= link_to "edit", edit_picture_path(p) %><br>
+<%= link_to "Delete", picture_path(p), method: :delete, data: { confirm: "are you sure?" } %><br>
+
+<% end %>
