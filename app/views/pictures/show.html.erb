@@ -1,5 +1,27 @@
-<%= @picture.title %>
-<br>
-<%= @picture.description %>
+<div id="all-posts">
+  <div id="each-post-show-page">
 
-<%= link_to "back", authenticated_root_path %>
+    <small id="created-by">Created by:
+      <%= @picture.user.email %><br>
+      <small id="created-by">
+        <%= @picture.created_at %>
+      </small> <br>
+    </small>
+  <div style="clear:both;"></div>
+
+    <%= @picture.title %>
+    <br>
+
+    <%= image_tag @picture.image.url, :size => "350x250" %><br>
+
+    <div id="description">
+      <%= @picture.description %>
+    </div>
+    <br>
+
+    <div id="buttons">
+      <%= link_to "", authenticated_root_path, class: "btn btn-secondary glyphicon glyphicon-arrow-left" %>
+      <%= link_to "", edit_picture_path, class: "btn btn-primary glyphicon glyphicon-pencil" %>
+    </div>
+  </div>
+</div>

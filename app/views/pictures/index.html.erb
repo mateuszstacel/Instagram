@@ -1,13 +1,39 @@
-<%= link_to "Create new", new_picture_path %>
+<div id="container">
 
-<% @pictures.each do |p|%>
-<br>
-title: <%= p.title %>
-<br>
-description: <%= p.description %>
+    <% @pictures.each do |p|%>
+    <br>
 
-<%= link_to "Show", p %><br>
-<%= link_to "edit", edit_picture_path(p) %><br>
-<%= link_to "Delete", picture_path(p), method: :delete, data: { confirm: "are you sure?" } %><br>
+    <div id="all-posts">
+      <small id="created-by">Created by:
+        <%= p.user.email %><br>
+        <small id="created-by">
+          <%= p.created_at %>
+        </small> <br>
+      </small>
+    <div style="clear:both;"></div>
 
-<% end %>
+       <h1 class="text-color">
+         <%= p.title %>
+       </h1>
+
+        <%= image_tag p.image.url, :size => "350x250" %><br>
+        <div id="description">
+          <%= p.description %>
+        </div>
+      <br>
+
+      <div id="buttons">
+      <%= link_to "", like_picture_path(p), method: :put, class: "btn btn-default glyphicon glyphicon-thumbs-up" %>
+      <%= p.get_upvotes.size%>
+      </div>
+      
+        <div id="buttons">
+          <%= link_to "", p, class: "btn btn-primary glyphicon glyphicon-eye-open" %>
+          <%= link_to "", edit_picture_path(p), class: "btn btn-secondary glyphicon glyphicon-pencil" %>
+          <%= link_to "", picture_path(p), method: :delete, data: { confirm: "are you sure?" }, class: "glyphicon glyphicon-trash btn btn-danger" %>
+        </div>
+      </div>
+    <br>
+    <% end %>
+
+</div>

@@ -7,7 +7,11 @@ gem 'haml', '~> 5.0', '>= 5.0.4'
 
 gem 'simple_form', '~> 4.1'
 
-gem 'bootstrap-sass', '~> 3.4'
+gem 'bootstrap-sass', '~> 3.4.0'
+gem 'sassc-rails', '>= 2.0.0'
+gem 'jquery-rails'
+gem "paperclip", "~> 6.0.0"
+gem 'acts_as_votable', '~> 0.12.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
