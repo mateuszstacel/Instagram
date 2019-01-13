@@ -19,6 +19,24 @@ class PicturesController < ApplicationController
     end
   end
 
+  def edit
+    @picture = Picture.find(params[:id])
+  end
+
+  def update
+    @picture = Picture.find(params[:id])
+
+    if @picture.update(picture_params)
+      redirect_to @picture, notice: "Picture Edited"
+    end
+  end
+
+  def destroy
+    @picture = Picture.find(params[:id])
+    @picture.destroy
+    redirect_to authenticated_root_path
+  end
+
 
   private
 
