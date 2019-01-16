@@ -32,7 +32,7 @@ rails --version
 ### Installing
 Follow the instructions below to get both a test and a development environment running
 ```
-git clone https://github.com/antcin/instagram-challenge.git
+git clone https://github.com/mateuszstacel/Instagram
 bundle install
 bin/rails db:create
 bin/rails db:migrate
