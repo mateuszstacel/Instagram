@@ -1,24 +1,41 @@
-# README
+# Instagram
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A place where you can be yourself.
 
-Things you may want to cover:
+## Technologies used
+- Back-end
+  - [Ruby on Rails](http://rubyonrails.org/)
+  - [Devise](https://github.com/plataformatec/devise)
+  - [Paperclip](https://github.com/thoughtbot/paperclip)
+- Front-end
+  - HTML
+  - CSS
+  - [Bootstrap](https://getbootstrap.com/)
 
-* Ruby version
+## Getting started
+Follow the instructions below to download a copy of the project and run it locally for testing and development purposes.
 
-* System dependencies
+### Prerequisites
+- Verify that a current version of Ruby is installed:
+```
+ruby -v
+```
+- Verify that PostgreSQL database is correctly installed on your local machine:
+```
+psql --version
+```
+- Verify that a current version of Rails is installed:
+```
+rails --version
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Installing
+Follow the instructions below to get both a test and a development environment running
+```
+git clone https://github.com/antcin/instagram-challenge.git
+bundle install
+bin/rails db:create
+bin/rails db:migrate
+bin/rails server # Start the server at localhost:3000
+```
+In a web browser, visit `localhost:3000` and register to Instagram to start posting.
