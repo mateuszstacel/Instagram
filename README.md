@@ -2,6 +2,9 @@
 
 A place where you can be yourself.
 
+
+![screenshot](example.png)
+
 ## Technologies used
 - Back-end
   - [Ruby on Rails](http://rubyonrails.org/)
